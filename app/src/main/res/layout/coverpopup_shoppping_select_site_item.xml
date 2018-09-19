@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_bg_shape"
+        android:layout_width="@dimen/px_500"
+        android:layout_height="@dimen/px_519">
+        <TextView
+            android:layout_marginTop="@dimen/px_40"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/store_confirmation"
+            android:textSize="@dimen/px_30"
+            android:textColor="@color/cl_666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/site_name"
+            android:textSize="@dimen/px_32"
+            android:layout_marginTop="@dimen/px_100"
+            android:textColor="@color/cl_6fd1c8"
+            android:layout_gravity="center_horizontal"
+            android:text="蜗牛皇室战争"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/site_details_address"
+            android:layout_marginTop="@dimen/px_30"
+            android:layout_gravity="center_horizontal"
+            android:text="西城区黄市大街23号"
+            android:textSize="@dimen/px_28"
+            android:textColor="@color/cl_333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginTop="@dimen/px_160"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:background="@color/cl_e3e3e3" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80">
+            <Button
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/cl_666666"
+                android:textSize="@dimen/px_28"
+                android:id="@+id/cancel_btn"
+                android:background="@null"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent" />
+            <View
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/px_1"
+                android:layout_height="@dimen/px_60"
+                android:background="@color/cl_e3e3e3" />
+            <Button
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/affirm"
+                android:textColor="@color/cl_6fd1c8"
+                android:textSize="@dimen/px_28"
+                android:id="@+id/confirm_btn"
+                android:background="@null"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

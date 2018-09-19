@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_160"
+        android:paddingLeft="@dimen/px_32"
+        android:paddingRight="@dimen/px_32">
+
+        <ImageView
+            android:id="@+id/shopping_img"
+            android:layout_width="@dimen/px_100"
+            android:layout_height="@dimen/px_100"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/shopping_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_30"
+            android:layout_marginTop="@dimen/px_30"
+            android:layout_toRightOf="@id/shopping_img"
+            android:text="蜗牛家大西瓜"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_28" />
+
+        <TextView
+            android:id="@+id/shopping_special_offer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/px_30"
+            android:layout_marginLeft="@dimen/px_30"
+            android:layout_toRightOf="@id/shopping_img"
+            android:text="¥23.4"
+            android:textColor="@color/cl_d7123d"
+            android:textSize="@dimen/px_28" />
+
+        <TextView
+            android:id="@+id/shopping_original_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/px_30"
+            android:layout_marginLeft="@dimen/px_30"
+            android:layout_toRightOf="@+id/shopping_special_offer"
+            android:text="¥23.4"
+            android:textColor="@color/cl_999999"
+            android:textSize="@dimen/px_24" />
+
+        <ImageView
+            android:id="@+id/shopping_add"
+            android:layout_width="@dimen/px_50"
+            android:layout_height="@dimen/px_50"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/px_20"
+            android:src="@mipmap/add_shopping_icon" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:background="@color/cl_e3e3e3" />
+</LinearLayout>

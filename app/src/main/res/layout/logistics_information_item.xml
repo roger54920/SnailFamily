@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_160">
+
+    <ImageView
+        android:id="@+id/logistics_information_img"
+        android:layout_width="@dimen/px_100"
+        android:layout_height="@dimen/px_100"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/px_32"
+        android:src="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/logistics_information_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_30"
+        android:layout_marginTop="@dimen/px_30"
+        android:layout_toRightOf="@+id/logistics_information_img"
+        android:src="@drawable/in_transit_icon" />
+
+    <TextView
+        android:id="@+id/li_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_marginTop="@dimen/px_30"
+        android:layout_toRightOf="@+id/logistics_information_icon"
+        android:text="运输中"
+        android:textColor="@color/cl_6fd1c8"
+        android:textSize="@dimen/px_26" />
+
+    <TextView
+        android:id="@+id/li_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/li_state"
+        android:layout_marginLeft="@dimen/px_30"
+        android:layout_marginTop="@dimen/px_30"
+        android:layout_toRightOf="@+id/logistics_information_img"
+        android:singleLine="true"
+        android:text="运输中111111111111111111"
+        android:textColor="@color/cl_666666"
+        android:textSize="@dimen/px_26" />
+
+    <TextView
+        android:text="下午3:32"
+        android:id="@+id/li_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/px_32"
+        android:layout_marginTop="@dimen/px_30"
+        android:textColor="@color/cl_999999" />
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:background="@color/cl_e3e3e3" />
+</RelativeLayout>

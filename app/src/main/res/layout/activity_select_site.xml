@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select_site"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.ysww.snailfamily.ui.shopping.SelectSiteActivity">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:text="@string/cancel"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_30" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/select_site"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <com.example.ysww.snailfamily.custom.MyScrollview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80">
+
+                <EditText
+                    android:id="@+id/input_site_name_address"
+                    android:layout_width="@dimen/px_660"
+                    android:layout_height="@dimen/px_60"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/shopping_input_number_edit_shape"
+                    android:gravity="center_vertical"
+                    android:hint="@string/enter_your_name_site_address"
+                    android:imeOptions="actionSearch"
+                    android:maxLength="32"
+                    android:paddingLeft="@dimen/px_30"
+                    android:singleLine="true"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_999999"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_26" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_60"
+                android:background="@color/cl_f5f5f5"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/px_32"
+                android:text="蜗牛站点"
+                android:textColor="@color/cl_999999"
+                android:textSize="@dimen/px_26" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/nearest_me_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_60"
+                android:background="@color/cl_f5f5f5"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/px_32"
+                android:text="@string/other_sites"
+                android:textColor="@color/cl_999999"
+                android:textSize="@dimen/px_26" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/other_sites_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.example.ysww.snailfamily.custom.MyScrollview>
+
+</LinearLayout>

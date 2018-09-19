@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_personal_message_maintain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.UserOperationOpinionFeedbackActivity">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96">
+        <ImageView
+            android:layout_marginLeft="@dimen/px_32"
+            android:src="@mipmap/zuojian_hei"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_centerInParent="true"
+            android:textColor="@color/cl_333333"
+            android:textStyle="normal"
+            android:text="意见反馈"
+            android:textSize="@dimen/px_36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/cl_f5f5f5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <EditText
+        android:paddingRight="@dimen/px_20"
+        android:layout_marginRight="@dimen/px_32"
+        android:layout_marginLeft="@dimen/px_32"
+        android:layout_marginTop="@dimen/px_30"
+        android:textCursorDrawable="@drawable/edit_cursor"
+        android:id="@+id/sr_opinion_feedback"
+        android:paddingLeft="@dimen/px_20"
+        android:paddingTop="@dimen/px_30"
+        android:textSize="@dimen/px_30"
+        android:hint="填写意见..."
+        android:gravity="top"
+        android:textColor="@color/cl_333333"
+        android:textColorHint="@color/cl_b3b3b3"
+        android:background="@drawable/opinion_feedback_frame"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_300" />
+    <Button
+        android:layout_marginTop="@dimen/px_160"
+        android:layout_marginLeft="@dimen/px_80"
+        android:layout_marginRight="@dimen/px_80"
+        android:text="提交意见"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_32"
+        android:background="@drawable/button_affirm_shape"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_80" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_parcel_particulars"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.ParcelDetailsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_32"
+            android:src="@mipmap/zuojian_hei" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="包裹详情"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <com.example.ysww.snailfamily.custom.MyScrollview
+        android:background="@color/cl_f5f5f5"
+        android:layout_marginBottom="@dimen/px_97"
+        android:paddingTop="@dimen/px_30"
+        android:id="@+id/myScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/px_32">
+                <TextView
+                    android:layout_marginTop="@dimen/px_20"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:layout_alignParentRight="true"
+                    android:text="已到达蜗牛站"
+                    android:textSize="@dimen/px_26"
+                    android:textColor="@color/cl_6fd1c8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.example.ysww.snailfamily.custom.FullPhotoView
+                    android:id="@+id/fullPhotoView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px_140"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:src="@drawable/check_large_icon" />
+
+                <TextView
+                    android:id="@+id/haulier_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fullPhotoView"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="承运来源：EMS"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_26" />
+
+                <TextView
+                    android:id="@+id/express_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/haulier_source"
+                    android:layout_marginTop="@dimen/px_15"
+                    android:text="快递单号：11891495555203"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_26" />
+
+                <TextView
+                    android:id="@+id/zoom"
+                    style="@style/zoom_tv"
+                    android:layout_below="@+id/express_number"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/timeline_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zoom"
+                    android:paddingBottom="@dimen/px_30"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_1"
+                android:background="@color/cl_e3e3e3" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginBottom="@dimen/px_96"
+                android:id="@+id/chat_recyclerview"
+                android:layout_marginTop="@dimen/px_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </com.example.ysww.snailfamily.custom.MyScrollview>
+    <View
+        android:layout_above="@+id/buttom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:background="@color/cl_e3e3e3" />
+    <RelativeLayout
+        android:background="@color/cl_f5f5f5"
+        android:id="@+id/buttom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:layout_marginLeft="@dimen/px_32"
+            android:layout_centerVertical="true"
+            android:id="@+id/voice"
+            android:src="@drawable/voice_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/px_20"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/px_30"
+            android:textColor="@color/cl_333333"
+            android:layout_toRightOf="@id/voice"
+            android:layout_toLeftOf="@+id/phone"
+            android:layout_marginLeft="@dimen/px_30"
+            android:layout_marginRight="@dimen/px_30"
+            android:id="@+id/sr_dialog_box"
+            android:background="@drawable/dialog_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_70" />
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px_32"
+            android:layout_centerVertical="true"
+            android:id="@+id/phone"
+            android:src="@drawable/phone_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

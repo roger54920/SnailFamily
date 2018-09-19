@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_parcel_particulars"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.CollectingParcelDisplayActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_32"
+            android:src="@mipmap/zuojian_hei" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="代付包裹"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginBottom="@dimen/px_96"
+        android:background="@color/cl_f5f5f5"
+        android:paddingTop="@dimen/px_30"
+        android:id="@+id/collecting_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"/>
+
+    <Button
+        android:id="@+id/add_btn"
+        android:textSize="@dimen/px_32"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="新增代付货款"
+        android:background="@color/cl_6fd1c8"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

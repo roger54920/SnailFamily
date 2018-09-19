@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/px_20"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/px_32">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_30"
+        android:paddingRight="@dimen/px_32">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_28" />
+
+        <TextView
+            android:id="@+id/ipone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="15811478789"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_28" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="@dimen/px_22"
+            android:text="北京市海淀区惠新西街南口"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_28" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:layout_marginTop="@dimen/px_26"
+        android:background="@color/cl_e3e3e3"
+        android:paddingRight="@dimen/px_32" />
+
+    <RelativeLayout
+        android:id="@+id/buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_80"
+            android:layout_centerVertical="true"
+            android:background="@color/transparence"
+            android:button="@drawable/radio_style"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/px_20"
+            android:text=""
+            android:textColor="@color/radiobutton_textcolor"
+            android:textSize="@dimen/px_26" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_80"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px_32"
+            android:drawableLeft="@drawable/delete_icon"
+            android:gravity="center_vertical"
+            android:text="   删除"
+            android:textColor="@color/cl_b3b3b3"
+            android:textSize="@dimen/px_26" />
+
+        <TextView
+            android:id="@+id/compile"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_80"
+            android:layout_marginRight="11dp"
+            android:drawableLeft="@drawable/compile_icon"
+            android:gravity="center_vertical"
+            android:text="   编辑"
+            android:textColor="@color/cl_b3b3b3"
+            android:textSize="@dimen/px_26"
+            android:layout_marginEnd="11dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/delete"
+            android:layout_toStartOf="@+id/delete" />
+    </RelativeLayout>
+
+</LinearLayout>

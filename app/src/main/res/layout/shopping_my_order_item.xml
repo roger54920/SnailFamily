@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/px_20"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32">
+
+            <ImageView
+                android:id="@+id/site_icon"
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/logo_icon" />
+
+            <TextView
+                android:id="@+id/site_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_30"
+                android:layout_toRightOf="@+id/site_icon"
+                android:text="蜗牛黄石店"
+                android:textColor="@color/cl_666666"
+                android:textSize="@dimen/px_28" />
+
+            <TextView
+                android:id="@+id/site_payment_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="已支付"
+                android:textColor="@color/cl_666666"
+                android:textSize="@dimen/px_28" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/px_30"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingTop="@dimen/px_20">
+
+            <TextView
+                android:id="@+id/commodity_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="怡宝纯净水551/"
+                android:textColor="@color/cl_666666"
+                android:textSize="@dimen/px_28" />
+
+            <TextView
+                android:id="@+id/commodity_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/px_220"
+                android:text="1"
+                android:textColor="@color/cl_666666"
+                android:textSize="@dimen/px_28" />
+
+            <TextView
+                android:id="@+id/commodity_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/px_32"
+                android:text="¥ 1.55"
+                android:textColor="@color/cl_666666"
+                android:textSize="@dimen/px_28" />
+            <RelativeLayout
+                android:id="@+id/commodity_rl_1"
+                android:layout_below="@+id/commodity_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/commodity_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="少吃点"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="@dimen/px_28" />
+
+                <TextView
+                    android:id="@+id/commodity_num_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/px_220"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="1"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="@dimen/px_28" />
+
+                <TextView
+                    android:id="@+id/commodity_money_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="¥ 23.3"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="@dimen/px_28" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/order_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/commodity_rl_1"
+                android:layout_marginTop="@dimen/px_20"
+                android:text="订单号：2131232132"
+                android:textColor="@color/cl_999999"
+                android:textSize="@dimen/px_26" />
+
+            <TextView
+                android:id="@+id/commodity_total_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/commodity_rl_1"
+                android:layout_marginRight="@dimen/px_220"
+                android:layout_marginTop="@dimen/px_20"
+                android:text="共计1件"
+                android:textColor="@color/cl_999999"
+                android:textSize="@dimen/px_26" />
+
+            <TextView
+                android:id="@+id/cope_with"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/commodity_rl_1"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/px_32"
+                android:layout_marginTop="@dimen/px_20"
+                android:text="应付¥ 33.3"
+                android:textColor="@color/cl_999999"
+                android:textSize="@dimen/px_26" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_layout" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80">
+
+            <Button
+                android:id="@+id/go_pay_btn"
+                android:layout_width="@dimen/px_160"
+                android:layout_height="@dimen/px_60"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/px_32"
+                android:background="@drawable/my_order_button_payment_shape"
+                android:text="@string/go_pay"
+                android:textColor="@color/cl_f0af42"
+                android:textSize="@dimen/px_28" />
+
+            <Button
+                android:id="@+id/delete_order_btn"
+                android:layout_width="@dimen/px_160"
+                android:layout_height="@dimen/px_60"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/px_20"
+                android:layout_toLeftOf="@+id/go_pay_btn"
+                android:background="@drawable/my_order_button_delete_shape"
+                android:text="@string/delete_order_btn"
+                android:textColor="@color/cl_666666"
+                android:textSize="@dimen/px_28" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

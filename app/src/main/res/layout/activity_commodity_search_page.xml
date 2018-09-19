@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_commodity_search_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.ysww.snailfamily.ui.shopping.CommoditySearchPageActivity">
+
+    <include layout="@layout/commodity_search_box_top" />
+
+    <include layout="@layout/line_twenty_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/px_30"
+        android:paddingLeft="@dimen/px_32"
+        android:paddingRight="@dimen/px_32">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_20"
+            android:text="@string/hot_search"
+            android:textColor="@color/cl_999999"
+            android:textSize="@dimen/px_26" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hot_search_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <include layout="@layout/line_twenty_layout" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/px_30"
+        android:paddingLeft="@dimen/px_32"
+        android:paddingRight="@dimen/px_32">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_20"
+            android:text="@string/history_search"
+            android:textColor="@color/cl_999999"
+            android:textSize="@dimen/px_26" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/history_search_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cl_f5f5f5">
+
+        <Button
+            android:id="@+id/clear_history_record_btn"
+            android:layout_width="@dimen/px_220"
+            android:layout_height="@dimen/px_60"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px_40"
+            android:background="@drawable/clear_histroy_record_shape"
+            android:gravity="center"
+            android:text="@string/clear_history_record"
+            android:textColor="@color/cl_999999"
+            android:textSize="@dimen/px_28" />
+    </RelativeLayout>
+</LinearLayout>

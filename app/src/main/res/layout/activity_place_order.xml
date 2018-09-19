@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_place_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.ysww.snailfamily.ui.shopping.PlaceOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@drawable/user_return_icon" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/place_order"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <com.example.ysww.snailfamily.custom.MyScrollview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:paddingBottom="@dimen/px_80">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80"
+                android:background="@color/cl_f5f5f5">
+
+                <Button
+                    android:id="@+id/appointment_send"
+                    android:layout_width="@dimen/px_180"
+                    android:layout_height="@dimen/px_60"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/promptly_send"
+                    android:background="@drawable/button_send_shape"
+                    android:gravity="center"
+                    android:text="@string/appointment_send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px_30" />
+
+                <Button
+                    android:id="@+id/promptly_send"
+                    android:layout_width="@dimen/px_180"
+                    android:layout_height="@dimen/px_60"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:background="@drawable/button_send_shape"
+                    android:gravity="center"
+                    android:text="@string/promptly_send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px_30" />
+            </RelativeLayout>
+            <include layout="@layout/line_twenty_layout" />
+            <RelativeLayout
+                android:id="@+id/modify"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_160"
+                android:paddingLeft="@dimen/px_32"
+                android:paddingRight="@dimen/px_32">
+
+                <ImageView
+                    android:id="@+id/address_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/address_icon" />
+
+                <TextView
+                    android:id="@+id/name_phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:layout_marginTop="@dimen/px_40"
+                    android:layout_toRightOf="@+id/address_icon"
+                    android:text="招喜玲 17782323222"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28" />
+
+                <TextView
+                    android:layout_marginRight="@dimen/px_160"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:id="@+id/address_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_phone_tv"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:layout_marginTop="@dimen/px_18"
+                    android:layout_toRightOf="@+id/address_icon"
+                    android:text="91金融"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/px_20"
+                    android:drawableRight="@mipmap/youjian"
+                    android:gravity="center"
+                    android:text="@string/modify"
+                    android:textColor="@color/cl_86cfc8"
+                    android:textSize="@dimen/px_30" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/line_twenty_layout" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/place_order_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/no_content"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_180">
+                <TextView
+                    android:gravity="center"
+                    android:text="您暂时还没有订单"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_30"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_179" />
+                <include layout="@layout/line_layout"/>
+            </LinearLayout>
+
+            <!--<include layout="@layout/line_twenty_layout" />-->
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/select_delivery_mode_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/px_32"
+                android:paddingRight="@dimen/px_32">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/select_delivery_mode"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28" />
+
+                <TextView
+                    android:id="@+id/delivery_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/px_20"
+                    android:drawableRight="@mipmap/youjian"
+                    android:gravity="center"
+                    android:hint="@string/please_select"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_999999"
+                    android:textSize="@dimen/px_28" />
+            </RelativeLayout>
+
+            <!--<include layout="@layout/line_twenty_layout" />-->
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/px_32"
+                android:paddingRight="@dimen/px_32">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="可用积分抵扣2.38元"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28" />
+
+                <com.example.ysww.snailfamily.custom.SwitchButton
+                    android:id="@+id/integral_sb"
+                    android:layout_width="@dimen/px_100"
+                    android:layout_height="@dimen/px_60"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!--<include layout="@layout/line_layout" />-->
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/px_32"
+                android:paddingRight="@dimen/px_32">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/member_discount"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="¥ 2.38"
+                    android:textColor="@color/cl_d7123d"
+                    android:textSize="@dimen/px_28" />
+            </RelativeLayout>
+
+            <!--<include layout="@layout/line_layout" />-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/px_32"
+                android:paddingRight="@dimen/px_32">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/freight"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/zero"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="@dimen/px_28" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_layout" />
+        </LinearLayout>
+    </com.example.ysww.snailfamily.custom.MyScrollview>
+
+    <RelativeLayout
+        android:id="@+id/shopping_cart_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_80"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <include layout="@layout/line_layout" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/total_amount"
+            android:text="@string/total_amount"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_28" />
+
+        <TextView
+            android:id="@+id/total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_40"
+            android:layout_toLeftOf="@+id/go_payment"
+            android:text="¥0.00"
+            android:textColor="@color/cl_d7123d"
+            android:textSize="@dimen/px_28"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/go_payment"
+            android:layout_width="@dimen/px_160"
+            android:layout_height="@dimen/px_80"
+            android:layout_alignParentRight="true"
+            android:background="@color/cl_fbac00"
+            android:gravity="center"
+            android:text="@string/go_payment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_28" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cl_e3e3e3" />
+    </RelativeLayout>
+</RelativeLayout>

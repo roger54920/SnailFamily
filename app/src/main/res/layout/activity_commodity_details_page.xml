@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_commodity_details_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="ui.shopping.CommodityDetailsPageActivity">
+
+    <com.example.ysww.snailfamily.custom.MyScrollview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/px_80">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/design_seartch_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_390"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+
+                <RelativeLayout
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_96"
+                    android:background="@null">
+
+                    <ImageView
+                        android:id="@+id/details_return"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/px_12"
+                        android:padding="@dimen/px_20"
+                        android:src="@drawable/commodity_details_return_icon" />
+
+                    <ImageView
+                        android:id="@+id/details_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/px_12"
+                        android:padding="@dimen/px_20"
+                        android:src="@drawable/commodity_details_share_icon" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/commodity_details_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_110"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/px_32"
+                android:paddingRight="@dimen/px_32">
+
+                <TextView
+                    android:id="@+id/right_dish_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28" />
+
+                <TextView
+                    android:id="@+id/shopping_special_offer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/px_20"
+                    android:layout_toRightOf="@+id/shopping_img"
+                    android:text="¥ 00.00"
+                    android:textColor="@color/cl_d7123d"
+                    android:textSize="@dimen/px_28" />
+
+                <TextView
+                    android:id="@+id/shopping_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/px_20"
+                    android:layout_marginLeft="@dimen/px_25"
+                    android:layout_toRightOf="@+id/shopping_special_offer"
+                    android:text="¥ 00.00"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_24" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px_40"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginBottom="@dimen/px_20"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/right_dish_remove"
+                        android:layout_width="@dimen/px_40"
+                        android:layout_height="@dimen/px_40"
+                        android:clickable="true"
+                        android:src="@mipmap/reduce_shopping_icon" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:text="1"
+                        android:id="@+id/right_dish_account"
+                        android:layout_width="@dimen/px_70"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="@dimen/px_28" />
+
+                    <ImageView
+                        android:id="@+id/right_dish_add"
+                        android:layout_width="@dimen/px_40"
+                        android:layout_height="@dimen/px_40"
+                        android:clickable="true"
+                        android:src="@mipmap/add_shopping_icon" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/commodity_details_title_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_60"
+                android:background="@color/cl_f5f5f5">
+
+                <View
+                    android:layout_width="@dimen/px_200"
+                    android:layout_height="@dimen/px_1"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/details"
+                    android:background="@color/cl_e3e3e3" />
+
+                <TextView
+                    android:id="@+id/details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:layout_marginRight="@dimen/px_30"
+                    android:text="@string/details"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="@dimen/px_26" />
+
+                <View
+                    android:layout_width="@dimen/px_200"
+                    android:layout_height="@dimen/px_1"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/details"
+                    android:background="@color/cl_e3e3e3" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/details_img1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_470"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/details_img2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_300"
+                android:layout_below="@+id/details_img1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+    </com.example.ysww.snailfamily.custom.MyScrollview>
+
+    <RelativeLayout
+        android:id="@+id/shopping_cart_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_80"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <include layout="@layout/line_layout" />
+
+        <LinearLayout
+            android:id="@+id/no_shopping_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shopping_cart_total_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_130"
+                android:text="@string/zero"
+                android:textColor="@color/cl_999999"
+                android:textSize="@dimen/px_24" />
+
+            <TextView
+                android:id="@+id/freight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px_7"
+                android:layout_marginLeft="@dimen/px_130"
+                android:text="@string/delivery_fee_zero"
+                android:textColor="@color/cl_999999"
+                android:textSize="@dimen/px_20" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/go_accounts"
+            android:layout_width="@dimen/px_160"
+            android:layout_height="@dimen/px_80"
+            android:layout_alignParentRight="true"
+            android:background="@color/cl_fbac00"
+            android:gravity="center"
+            android:text="@string/go_accounts"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_28" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cl_e3e3e3" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/shopping_cart_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/px_10"
+        android:layout_marginLeft="@dimen/px_32"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/shopping_cart"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="@dimen/px_80"
+            android:layout_gravity="center"
+            android:src="@drawable/shopping_cart_nor" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/shopping_cart_total_num"
+        android:layout_width="@dimen/px_30"
+        android:layout_height="@dimen/px_30"
+        android:layout_above="@id/shopping_cart_bottom"
+        android:layout_alignRight="@id/shopping_cart_layout"
+        android:background="@drawable/small_red_circle"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_18"
+        android:textStyle="bold"
+        android:visibility="gone" />
+</RelativeLayout>

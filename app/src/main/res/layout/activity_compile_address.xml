@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".ui.CompileAddressActivity">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96">
+        <ImageView
+            android:layout_marginLeft="@dimen/px_32"
+            android:src="@mipmap/zuojian_hei"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_centerInParent="true"
+            android:textColor="@color/cl_333333"
+            android:textStyle="normal"
+            android:text="编辑地址"
+            android:textSize="@dimen/px_36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:background="@color/cl_f5f5f5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/two"
+            android:layout_marginTop="@dimen/px_30"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/name"
+                android:layout_marginTop="@dimen/px_30"
+                android:layout_marginBottom="@dimen/px_20"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:text="姓名"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/sr_name"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/px_20"
+                android:textSize="@dimen/px_30"
+                android:hint="请输入名字"
+                android:textColor="@color/cl_333333"
+                android:textColorHint="@color/cl_b3b3b3"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_shape"
+                android:layout_below="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80" />
+            <TextView
+                android:id="@+id/sfz"
+                android:layout_below="@+id/sr_name"
+                android:layout_marginTop="@dimen/px_30"
+                android:layout_marginBottom="@dimen/px_20"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:text="手机号"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:textCursorDrawable="@drawable/edit_cursor"
+                android:id="@+id/sadf"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:inputType="phone|number"
+                android:layout_marginBottom="@dimen/px_40"
+                android:paddingLeft="@dimen/px_20"
+                android:textSize="@dimen/px_30"
+                android:hint="收件人手机号码"
+                android:textColor="@color/cl_333333"
+                android:textColorHint="@color/cl_b3b3b3"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_shape"
+                android:layout_below="@+id/sfz"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:layout_below="@+id/two"
+            android:background="@color/cl_e3e3e3" />
+        <RelativeLayout
+            android:id="@+id/region"
+            android:layout_below="@+id/line"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_100">
+            <TextView
+                android:text="地区"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/youjian" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:layout_below="@+id/region"
+            android:background="@color/cl_e3e3e3" />
+
+        <RelativeLayout
+            android:id="@+id/plot_name"
+            android:layout_below="@+id/line1"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_100">
+            <TextView
+                android:text="小区名"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/youjian" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:layout_below="@+id/plot_name"
+            android:background="@color/cl_e3e3e3" />
+
+        <RelativeLayout
+            android:id="@+id/tablet"
+            android:layout_below="@+id/line2"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_100">
+            <TextView
+                android:text="门牌号"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/youjian" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:layout_below="@+id/tablet"
+            android:background="@color/cl_e3e3e3" />
+        <Button
+            android:id="@+id/compole_address_btn"
+            android:textSize="@dimen/px_32"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="编辑地址"
+            android:background="@color/cl_6fd1c8"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_96"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</RelativeLayout>

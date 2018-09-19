@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_personal_message_maintain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.PersonalMessageMaintainActivity">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96">
+        <ImageView
+            android:padding="@dimen/px_20"
+            android:id="@+id/return_arrows"
+            android:layout_marginLeft="@dimen/px_12"
+            android:src="@drawable/user_return_icon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_centerInParent="true"
+            android:textColor="@color/cl_333333"
+            android:textStyle="normal"
+            android:text="@string/personal_information_maintenance"
+            android:textSize="@dimen/px_36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/cl_f5f5f5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:paddingBottom="@dimen/px_30"
+        android:layout_marginTop="@dimen/px_30"
+        android:paddingTop="@dimen/px_30"
+        android:paddingLeft="@dimen/px_32"
+        android:paddingRight="@dimen/px_32"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/name"
+            android:layout_marginTop="@dimen/px_30"
+            android:layout_marginBottom="@dimen/px_20"
+            android:textSize="@dimen/px_32"
+            android:textColor="@color/cl_333333"
+            android:text="@string/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:maxLength="11"
+            android:id="@+id/input_name"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/px_20"
+            android:textSize="@dimen/px_30"
+            android:hint="@string/import_name"
+            android:textColor="@color/cl_333333"
+            android:textColorHint="@color/cl_b3b3b3"
+            android:gravity="center_vertical"
+            android:background="@drawable/edit_text_shape"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:layout_below="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px__30"
+        android:paddingBottom="@dimen/px_30"
+        android:paddingTop="@dimen/px_30"
+        android:id="@+id/common_address_rl"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/px_32"
+        android:paddingRight="@dimen/px_32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/cy_adress"
+            android:textSize="@dimen/px_32"
+            android:textColor="@color/cl_333333"
+            android:text="@string/usual_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/youjian_tou"
+            android:layout_width="@dimen/px_16"
+            android:layout_height="@dimen/px_28" />
+    </RelativeLayout>
+
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px_150"
+            android:text="@string/finish"
+            android:textSize="@dimen/px_32"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_shape"
+            android:id="@+id/btn_finish"
+            android:layout_width="@dimen/px_280"
+            android:layout_height="@dimen/px_80" />
+    </LinearLayout>
+</LinearLayout>

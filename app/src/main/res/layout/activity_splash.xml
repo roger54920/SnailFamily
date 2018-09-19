@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SplashActivity">
+    <ImageView
+        android:id="@+id/sp_bg"
+        android:src="@mipmap/bg"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:visibility="invisible"
+        android:gravity="center"
+        android:textSize="@dimen/px_20"
+        android:textColor="@color/cl_333333"
+        android:id="@+id/sp_jump_btn"
+        android:background="@drawable/button_transparency_shape"
+        android:layout_width="@dimen/px_120"
+        android:layout_height="@dimen/px_60"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/px_20"
+        android:layout_marginTop="@dimen/px_20"/>
+</RelativeLayout>

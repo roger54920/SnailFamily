@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_personal_message_maintain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".ui.UserOperationBalanceRechargeActivity">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96">
+        <ImageView
+            android:padding="@dimen/px_20"
+            android:id="@+id/return_arrows"
+            android:layout_marginLeft="@dimen/px_12"
+            android:src="@drawable/user_return_icon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_centerInParent="true"
+            android:textColor="@color/cl_333333"
+            android:textStyle="normal"
+            android:text="@string/my_account"
+            android:textSize="@dimen/px_36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:background="@color/cl_f5f5f5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+   <RelativeLayout
+       android:paddingBottom="@dimen/px_30"
+       android:paddingLeft="@dimen/px_32"
+       android:background="@color/white"
+       android:layout_marginTop="@dimen/px_30"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <TextView
+           android:id="@+id/money_hint"
+           android:layout_marginTop="@dimen/px_30"
+           android:layout_marginBottom="@dimen/px_20"
+           android:text="@string/enter_top_up_amount"
+           android:textSize="@dimen/px_32"
+           android:textColor="@color/cl_333333"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <EditText
+           android:textCursorDrawable="@drawable/edit_cursor"
+           android:id="@+id/input_money"
+           android:maxLength="11"
+           android:singleLine="true"
+           android:inputType="phone|number"
+           android:paddingLeft="@dimen/px_20"
+           android:textSize="@dimen/px_30"
+           android:hint="@string/enter_top_up_amount"
+           android:textColor="@color/cl_333333"
+           android:textColorHint="@color/cl_b3b3b3"
+           android:gravity="center_vertical"
+           android:background="@drawable/edit_text_shape"
+           android:layout_below="@+id/money_hint"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/px_80" />
+       <TextView
+           android:visibility="gone"
+           android:id="@+id/display_credit"
+           android:layout_marginTop="@dimen/px_20"
+           android:layout_below="@+id/input_money"
+           android:textColor="@color/cl_666666"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <TextView
+           android:visibility="gone"
+           android:layout_marginLeft="@dimen/px_30"
+           android:layout_toRightOf="@+id/display_credit"
+           android:id="@+id/all_withdrawal"
+           android:layout_marginTop="@dimen/px_20"
+           android:layout_below="@+id/input_money"
+           android:text="全部提现"
+           android:textColor="@color/cl_6fd1c8"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+   </RelativeLayout>
+    <Button
+        android:id="@+id/recharge_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:background="@drawable/is_bottom_btn"
+        android:text="@string/my_recharge"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_32" />
+    </RelativeLayout>
+</RelativeLayout>

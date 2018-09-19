@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_parcel_particulars"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.UserAffirmActivity">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/white">
+
+        <ImageView
+            android:padding="@dimen/px_20"
+            android:id="@+id/return_arrows"
+            android:layout_marginLeft="@dimen/px_12"
+            android:src="@drawable/user_return_icon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="用户确认"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:layout_below="@+id/title"
+        android:background="@color/cl_e3e3e3" />
+
+    <com.example.ysww.snailfamily.custom.MyScrollview
+        android:layout_marginBottom="@dimen/px_96"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:background="@color/cl_f5f5f5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:paddingBottom="@dimen/px_20"
+                android:layout_marginTop="@dimen/px_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/px_32">
+
+                <com.example.ysww.snailfamily.custom.FullPhotoView
+                    android:scaleType="fitXY"
+                    android:id="@+id/fullPhotoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_140"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:src="@drawable/check_large_icon" />
+
+                <TextView
+                    android:id="@+id/haulier_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fullPhotoView"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="承运来源：EMS"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_26" />
+
+                <TextView
+                    android:id="@+id/express_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/haulier_source"
+                    android:layout_marginTop="@dimen/px_15"
+                    android:text="快递单号：11891495555203"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_26" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/region"
+                android:layout_marginTop="@dimen/px_10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/px_32">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_30"
+                    android:text="请为蜗牛顾家打分"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_30" />
+
+                <com.example.ysww.snailfamily.custom.RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/px_30"
+                    app:starCount="5"
+                    app:starEmpty="@drawable/star_empty"
+                    app:starFill="@drawable/star_fill"
+                    app:starHalf="@drawable/star_half"
+                    app:starImageSize="@dimen/px_44"
+                    app:starPadding="@dimen/px_40"
+                    app:starStep="0"
+                    app:stepSize="Half" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_60">
+
+                    <TextView
+                        android:id="@+id/td"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="蜗牛小哥的服务态度："
+                        android:textColor="@color/cl_999999"
+                        android:textSize="@dimen/px_26" />
+
+                    <RadioGroup
+                        android:id="@+id/service_radiogroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/px_60"
+                        android:layout_toRightOf="@+id/td"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:tag="1"
+                            android:id="@+id/service_stick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparence"
+                            android:button="@drawable/stick_style" />
+
+                        <RadioButton
+                            android:tag="-1"
+                            android:id="@+id/service_bad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_100"
+                            android:background="@color/transparence"
+                            android:button="@drawable/bad_style" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_60">
+
+                    <TextView
+                        android:id="@+id/sd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="蜗牛小哥的送货速度："
+                        android:textColor="@color/cl_999999"
+                        android:textSize="@dimen/px_26" />
+
+                    <RadioGroup
+                        android:id="@+id/delivery_radiogroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/px_60"
+                        android:layout_toRightOf="@+id/sd"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:tag="1"
+                            android:id="@+id/delivery_stick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparence"
+                            android:button="@drawable/stick_style" />
+
+                        <RadioButton
+                            android:tag="-1"
+                            android:id="@+id/delivery_bad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_100"
+                            android:background="@color/transparence"
+                            android:button="@drawable/bad_style" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/px_60"
+                    android:text="给蜗牛小哥的打赏："
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_26" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_70"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:layout_marginTop="@dimen/px_60"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:tag="1"
+                        android:layout_gravity="right"
+                        android:id="@+id/one_money"
+                        android:layout_width="@dimen/px_160"
+                        android:layout_height="@dimen/px_70"
+                        android:background="@drawable/money_style"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="一元"
+                        android:textColor="@color/radiobutton_textcolor_money"
+                        android:textSize="@dimen/px_30" />
+
+                    <CheckBox
+                        android:tag="5"
+                        android:layout_marginLeft="@dimen/px_80"
+                        android:layout_marginRight="@dimen/px_80"
+                        android:id="@+id/five_money"
+                        android:layout_width="@dimen/px_160"
+                        android:layout_height="@dimen/px_70"
+                        android:background="@drawable/money_style"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="五元"
+                        android:textColor="@color/radiobutton_textcolor_money"
+                        android:textSize="@dimen/px_30" />
+
+                    <CheckBox
+                        android:tag="10"
+                        android:id="@+id/ten_money"
+                        android:layout_width="@dimen/px_160"
+                        android:layout_height="@dimen/px_70"
+                        android:background="@drawable/money_style"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="十元"
+                        android:textColor="@color/radiobutton_textcolor_money"
+                        android:textSize="@dimen/px_30" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginTop="@dimen/px_20">
+
+                    <TextView
+                        android:id="@+id/ptf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/running_errands_fee"
+                        android:textColor="@color/cl_999999"
+                        android:textSize="@dimen/px_26" />
+
+                    <EditText
+                        android:id="@+id/running_errands_fee"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_80"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/px_30"
+                        android:layout_marginRight="@dimen/px_32"
+                        android:layout_toRightOf="@+id/ptf"
+                        android:background="@drawable/staff_textbox"
+                        android:gravity="center_vertical"
+                        android:hint="@string/enter_amount"
+                        android:inputType="phone|number"
+                        android:paddingLeft="@dimen/px_20"
+                        android:singleLine="true"
+                        android:textColor="@color/cl_333333"
+                        android:textColorHint="@color/cl_b3b3b3"
+                        android:textCursorDrawable="@drawable/edit_cursor"
+                        android:textSize="@dimen/px_28" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginBottom="@dimen/px_40"
+                    android:background="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.example.ysww.snailfamily.custom.MyScrollview>
+
+    <Button
+        android:id="@+id/submit_evaluate_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/cl_6fd1c8"
+        android:gravity="center"
+        android:text="提交评价"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_32" />
+</RelativeLayout>

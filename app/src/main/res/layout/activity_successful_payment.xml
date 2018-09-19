@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_successful_payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.example.ysww.snailfamily.ui.shopping.SuccessfulPaymentActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/cl_6fd1c8"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_300">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px_50"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_96">
+
+            <ImageView
+                android:id="@+id/return_arrows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_12"
+                android:padding="@dimen/px_20"
+                android:src="@drawable/user_return_icon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/successful_payment_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px_50"
+            android:text="@string/successful_payment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_36" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px_100"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:id="@+id/qr_code"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/qr_code"
+            android:layout_marginTop="@dimen/px_100"
+            android:layout_marginBottom="@dimen/px_80"
+            android:layout_width="@dimen/px_350"
+            android:layout_height="@dimen/px_350" />
+    </RelativeLayout>
+</LinearLayout>

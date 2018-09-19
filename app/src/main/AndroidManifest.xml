@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ysww.snailfamily"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!-- 二维码 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 获取手机IMEI需要在AndroidManifest.xml中加上权限： -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 全局捕获异常 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <!-- 通知栏 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- 网络监控 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- banner权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 悬浮框权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".app.GApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.NotHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.WriteEfficacyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.PersonalMessageMaintainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.CommonSiteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.NewAddAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.ElectronParcelNumberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.BottomNavigationMenuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".ui.AddresseeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ParcelParticularsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.ParcelParticularsPromptlyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.ParcelParticularsPredictActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.UserAffirmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.PostponeParcelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SendCasesDisplayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SendCasesAffirmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.SendCasesTransactionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.SendCasesChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SendCasesChatAliPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AliPayModeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SendCasesOrderNumberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.CollectingParcelDisplayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CollectingPaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.CollectingDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CollectingDetailsInputActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.CollectingMeBalanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CollectingExceedTimeParcelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CollectingExpressDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.CollectingChatCauseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CollectingChatCustodyTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CollectingExceedTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.UserOperationMaintainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.UserOperationBalanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.UserOperationBalanceRechargeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.UserOperationMoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.UserOperationOpinionFeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.UserOperationFAQActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.UserOperationAboutSnailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.UserOperationMessageCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ParcelDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.PostponePayTheFeesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ParcelDetailsExceedTimeActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
+        <activity
+            android:name=".ui.CompileAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MipcaActivityCapture"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.OverDueParcelActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.UserReturnedParcelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SendNewSiteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SendSetTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MineVIPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PaidPaymentGoodsAcceptDeliveryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.ClipImageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 网络监听 -->
+        <activity
+            android:name=".net.BaseActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.me_jie.snailexpress_user.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.shopping.CommoditySearchPageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.shopping.CommoditySearchResultListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.shopping.CommodityDetailsPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shopping.PlaceOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shopping.PaymentOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shopping.LogisticsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shopping.InputNumberFindActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.shopping.ConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shopping.OfflinePaymentOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shopping.SuccessfulPaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shopping.MyOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shopping.MyOrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shopping.SelectSiteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.shopping.ShoppingScanQRCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shopping.LogisticsInformationActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_logistics_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.ysww.snailfamily.ui.shopping.LogisticsDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@drawable/user_return_icon" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/logisitics_deatails"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_twenty_layout" />
+
+    <com.example.ysww.snailfamily.custom.MyScrollview
+        android:id="@+id/myScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:background="@color/cl_f5f5f5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/px_32">
+
+                <TextView
+                    android:id="@+id/logistics_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:layout_marginTop="@dimen/px_30"
+                    android:text="运输中"
+                    android:textColor="@color/cl_86cfc8"
+                    android:textSize="@dimen/px_26" />
+
+                <com.example.ysww.snailfamily.custom.FullPhotoView
+                    android:id="@+id/fullPhotoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_140"
+                    android:layout_below="@+id/logistics_status"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/check_large_icon" />
+
+                <TextView
+                    android:id="@+id/haulier_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fullPhotoView"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="承运来源：EMS"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_26" />
+
+                <TextView
+                    android:id="@+id/express_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/haulier_source"
+                    android:layout_marginTop="@dimen/px_15"
+                    android:text="快递单号：11891495555203"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_26" />
+            </RelativeLayout>
+
+            <include layout="@layout/timer_shaft_layout" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_1"
+                android:background="@color/cl_e3e3e3" />
+
+        </LinearLayout>
+
+    </com.example.ysww.snailfamily.custom.MyScrollview>
+</LinearLayout>

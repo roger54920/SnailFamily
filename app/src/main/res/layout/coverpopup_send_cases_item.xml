@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/px_660"
+        android:layout_height="@dimen/px_660"
+        android:layout_gravity="center"
+        android:background="@drawable/dialog_bg_shape"
+        android:paddingLeft="@dimen/px_30"
+        android:paddingRight="@dimen/px_30">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_25">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/payment_method"
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="当前余额：10元"
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_30" />
+
+            <Button
+                android:id="@+id/recharge_btn"
+                android:layout_width="@dimen/px_140"
+                android:layout_height="@dimen/px_60"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_send_shape"
+                android:gravity="center"
+                android:text="@string/recharge"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px_30" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_215"
+            android:layout_below="@id/title"
+            android:layout_marginTop="@dimen/px_38">
+
+            <TextView
+                android:id="@+id/yuzf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/yezf"
+                android:drawablePadding="@dimen/px_30"
+                android:text="@string/balance_payment"
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_30" />
+
+            <TextView
+                android:id="@+id/zfb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/yuzf"
+                android:layout_marginTop="@dimen/px_37"
+                android:drawableLeft="@drawable/zfb"
+                android:drawablePadding="@dimen/px_30"
+                android:text="@string/alipay"
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/zfb"
+                android:layout_marginTop="@dimen/px_34"
+                android:drawableLeft="@drawable/weixin"
+                android:drawablePadding="@dimen/px_30"
+                android:text="@string/wechat_pay"
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_30" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_215"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/title"
+            android:layout_marginTop="@dimen/px_25">
+
+            <RadioButton
+                android:layout_weight="1"
+                android:layout_width="@dimen/px_44"
+                android:layout_height="@dimen/px_0"
+                android:background="@null"
+                android:button="@drawable/alipay_radio_style" />
+
+            <RadioButton
+                android:layout_weight="1"
+                android:layout_width="@dimen/px_44"
+                android:layout_height="@dimen/px_0"
+                android:background="@null"
+                android:button="@drawable/alipay_radio_style" />
+
+            <RadioButton
+                android:layout_weight="1"
+                android:layout_width="@dimen/px_44"
+                android:layout_height="@dimen/px_0"
+                android:background="@null"
+                android:button="@drawable/alipay_radio_style" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group"
+            android:layout_marginTop="15dp">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="@dimen/px_44"
+                android:layout_height="@dimen/px_44"
+                android:background="@drawable/checkbox_style"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/snail_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_20"
+                android:layout_toRightOf="@+id/checkbox"
+                android:text="蜗牛币5个可用"
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_32" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_40"
+                android:layout_toRightOf="@+id/snail_currency"
+                android:text="@string/send_cases_yh"
+                android:textColor="@color/cl_6fd1c8"
+                android:textSize="@dimen/px_26" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/region"
+            android:layout_marginTop="@dimen/px_30"
+            android:drawablePadding="@dimen/px_30"
+            android:text="@string/actual_payment_amount"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_30" />
+
+        <TextView
+            android:id="@+id/cos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sj"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px_30"
+            android:drawablePadding="@dimen/px_30"
+            android:text="10元+5个蜗牛币"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_30" />
+
+        <Button
+            android:id="@+id/cos_btn"
+            android:layout_width="@dimen/px_140"
+            android:layout_height="@dimen/px_60"
+            android:layout_below="@id/cos"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/px_40"
+            android:layout_marginTop="@dimen/px_20"
+            android:background="@drawable/button_send_shape"
+            android:gravity="center"
+            android:text="@string/settle_accounts"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_30" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/px_30"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginLeft="@dimen/px_32"
+        android:id="@+id/commodity_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="怡宝纯净水551/"
+        android:textColor="@color/cl_666666"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/commodity_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/px_220"
+        android:text="1"
+        android:textColor="@color/cl_666666"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/commodity_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/px_32"
+        android:text="¥ 1.55"
+        android:textColor="@color/cl_666666"
+        android:textSize="@dimen/px_28" />
+</RelativeLayout>

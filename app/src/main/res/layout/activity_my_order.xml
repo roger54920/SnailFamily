@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.ysww.snailfamily.ui.shopping.MyOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@drawable/user_return_icon" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/my_order"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <com.example.ysww.snailfamily.custom.RadioGroup
+        android:id="@+id/shopping_rg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_80"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/buy_online_rb"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/buy_online"
+                android:textColor="@color/shopping_textcolor_type"
+                android:textSize="@dimen/px_30" />
+
+            <RadioButton
+                android:id="@+id/offline_shopping_rb"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/offline_shopping"
+                android:textColor="@color/shopping_textcolor_type"
+                android:textSize="@dimen/px_30" />
+        </LinearLayout>
+    </com.example.ysww.snailfamily.custom.RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/offline_shopping_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cl_f5f5f5">
+
+        <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_order_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+        <TextView
+            android:id="@+id/no_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cl_f5f5f5"
+            android:gravity="center"
+            android:text="暂无商品信息"
+            android:textColor="@color/cl_999999"
+            android:textSize="@dimen/px_30"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

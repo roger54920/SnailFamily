@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_input_number_find"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.ysww.snailfamily.ui.shopping.InputNumberFindActivity">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@drawable/user_return_icon" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/input_number"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/the_library"
+        android:layout_width="@dimen/px_200"
+        android:layout_height="@dimen/px_60"
+        android:layout_below="@+id/input_commodity_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/px_80"
+        android:background="@drawable/button_send_shape"
+        android:text="@string/the_library"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_30" />
+
+    <EditText
+        android:id="@+id/input_commodity_number"
+        android:layout_width="@dimen/px_560"
+        android:layout_height="@dimen/px_80"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/shopping_input_number_edit_shape"
+        android:gravity="center"
+        android:hint="@string/enter_commodity_number"
+        android:singleLine="true"
+        android:paddingRight="@dimen/px_20"
+        android:paddingLeft="@dimen/px_20"
+        android:textColor="@color/cl_333333"
+        android:textColorHint="@color/cl_999999"
+        android:textCursorDrawable="@drawable/edit_cursor"
+        android:textSize="@dimen/px_28"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

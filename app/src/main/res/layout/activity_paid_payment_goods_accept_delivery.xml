@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_parcel_particulars"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.PaidPaymentGoodsAcceptDeliveryActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@drawable/user_return_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/receive_delivery"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <com.example.ysww.snailfamily.custom.MyScrollview
+        android:id="@+id/myScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_ll"
+        android:layout_below="@+id/title"
+        android:background="@color/cl_f5f5f5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/px_30"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/px_32">
+
+            <TextView
+                android:id="@+id/haulier_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_20"
+                android:text="承运来源：EMS"
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_26" />
+
+            <TextView
+                android:id="@+id/express_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_15"
+                android:text="快递单号：11891495555203"
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_26" />
+
+            <android.support.v7.widget.RecyclerView
+                android:background="@color/white"
+                android:id="@+id/timeline_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px_32"
+                android:layout_marginTop="@dimen/px_20" />
+            <RelativeLayout
+                android:layout_marginTop="@dimen/px_30"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_30"
+                android:layout_centerVertical="true"
+                android:background="@color/white">
+            </RelativeLayout>
+        </LinearLayout>
+    </com.example.ysww.snailfamily.custom.MyScrollview>
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cl_f5f5f5">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px_30"
+            android:id="@+id/paid_amount_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_105"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/px_32">
+
+            <TextView
+                android:id="@+id/ptf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/paid_amount"
+                android:textColor="@color/cl_999999"
+                android:textSize="@dimen/px_26" />
+
+            <EditText
+                android:id="@+id/paid_amount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_30"
+                android:layout_marginRight="@dimen/px_32"
+                android:layout_toRightOf="@+id/ptf"
+                android:background="@drawable/staff_textbox"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_amount"
+                android:inputType="phone|number"
+                android:paddingLeft="@dimen/px_20"
+                android:singleLine="true"
+                android:textColor="@color/cl_333333"
+                android:textColorHint="@color/cl_b3b3b3"
+                android:textCursorDrawable="@drawable/edit_cursor"
+                android:textSize="@dimen/px_28" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/apply_pay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_96"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/px_30"
+            android:background="@color/cl_6fd1c8"
+            android:gravity="center"
+            android:text="@string/apply_pay"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_32" />
+    </LinearLayout>
+</RelativeLayout>

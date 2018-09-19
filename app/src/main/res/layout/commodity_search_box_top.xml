@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@drawable/user_return_icon" />
+
+        <EditText
+            android:id="@+id/input_commodity_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_60"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_10"
+            android:layout_marginRight="@dimen/px_10"
+            android:layout_toLeftOf="@+id/shopping_seach_btn"
+            android:layout_toRightOf="@+id/return_arrows"
+            android:background="@drawable/shopping_seach_shape"
+            android:gravity="center_vertical"
+            android:hint="@string/input_commodity_name"
+            android:maxLength="32"
+            android:paddingLeft="@dimen/px_30"
+            android:paddingRight="@dimen/px_20"
+            android:singleLine="true"
+            android:textColor="@color/cl_333333"
+            android:textColorHint="@color/cl_999999"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:textSize="@dimen/px_26" />
+
+        <TextView
+            android:id="@+id/shopping_seach_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_12"
+            android:background="@null"
+            android:padding="@dimen/px_20"
+            android:text="@string/seach_tv"
+            android:textColor="@color/cl_86cfc8"
+            android:textSize="@dimen/px_30" />
+    </RelativeLayout>
+</LinearLayout>

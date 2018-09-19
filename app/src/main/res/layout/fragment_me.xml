@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <RelativeLayout
+            android:paddingTop="@dimen/px_50"
+            android:fitsSystemWindows="true"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/head_portrait"
+                android:layout_marginTop="@dimen/px_80"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/circle_shape"
+                android:layout_width="@dimen/px_140"
+                android:layout_height="@dimen/px_140" />
+            <TextView
+                android:id="@+id/isLogin"
+                android:paddingBottom="@dimen/px_40"
+                android:paddingTop="@dimen/px_40"
+                android:textSize="@dimen/px_36"
+                android:textColor="@color/cl_333333"
+                android:text="@string/write_off"
+                android:layout_below="@+id/head_portrait"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    <View
+        android:layout_marginTop="@dimen/px_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:layout_below="@+id/region"
+        android:background="@color/cl_e3e3e3" />
+        <RelativeLayout
+            android:id="@+id/personal_address_tv"
+            android:clickable="true"
+            android:background="@drawable/customer_selector"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_100">
+            <TextView
+                android:text="@string/personal_address"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/youjian" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:layout_below="@+id/region"
+            android:background="@color/cl_e3e3e3" />
+        <RelativeLayout
+            android:id="@+id/my_account"
+            android:clickable="true"
+            android:background="@drawable/customer_selector"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_100">
+            <TextView
+                android:text="@string/my_account"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/youjian" />
+        </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:layout_below="@+id/region"
+        android:background="@color/cl_e3e3e3" />
+    <RelativeLayout
+        android:id="@+id/my_order"
+        android:clickable="true"
+        android:background="@drawable/customer_selector"
+        android:paddingLeft="@dimen/px_32"
+        android:paddingRight="@dimen/px_32"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_100">
+        <TextView
+            android:text="@string/my_order"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/px_32"
+            android:textColor="@color/cl_333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="@dimen/px_16"
+            android:layout_height="@dimen/px_28"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/youjian" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:layout_below="@+id/region"
+        android:background="@color/cl_e3e3e3" />
+    <View
+        android:layout_marginTop="@dimen/px_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:layout_below="@+id/region"
+        android:background="@color/cl_e3e3e3" />
+        <RelativeLayout
+            android:clickable="true"
+            android:background="@drawable/customer_selector"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_100">
+            <TextView
+                android:text="@string/faq"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/youjian" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:layout_below="@+id/region"
+            android:background="@color/cl_e3e3e3" />
+        <RelativeLayout
+            android:clickable="true"
+            android:background="@drawable/customer_selector"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_100">
+            <TextView
+                android:text="@string/about_us"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/youjian" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:layout_below="@+id/region"
+            android:background="@color/cl_e3e3e3" />
+        <RelativeLayout
+            android:clickable="true"
+            android:background="@drawable/customer_selector"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_100">
+            <TextView
+                android:text="@string/current_version"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/youjian" />
+        </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:layout_below="@+id/region"
+        android:background="@color/cl_e3e3e3" />
+</LinearLayout>
